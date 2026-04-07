@@ -1,0 +1,73 @@
+Initial State
+
+left = 0
+char_set = {}
+max_length = 0
+start_index = 0
+
+Step 1 (right = 0 → 'a')
+max_length = 1, start = 0
+Window: "a"
+char_set = {a}
+length = 1 → update max
+
+Step 2 (right = 1 → 'b')
+Window: "ab"
+char_set = {a, b}
+max_length = 2, start = 0
+length = 2 → update
+
+Step 3 (right = 2 → 'c')
+Window: "abc"
+char_set = {a, b, c}
+max_length = 3, start = 0
+length = 3 → update
+
+Step 4 (right = 3 → 'd')
+Window: "abcd"
+char_set = {a, b, c, d}
+max_length = 4, start = 0
+length = 4 → update
+
+Step 5 (right = 4 → 'c') → DUPLICATE
+abcdc
+     ↑ duplicate 'c'
+
+remove 'a'
+window → "bcdc"
+char_set = {b, c, d}
+left = 1
+
+Still duplicate ❌
+remove 'b'
+window → "cdc"
+char_set = {c, d}
+left = 2
+
+Still duplicate ❌
+remove 'c'
+window → "dc"
+char_set = {d}
+left = 3
+
+Now safe
+Add 'c'
+window = "dc"
+char_set = {d, c}
+length = 2 → no update
+
+Step 6 (right = 5 → 'b')
+Window: "dcb"
+char_set = {d, c, b}
+length = 3 → no update
+
+Step 7 (right = 6 → 'e')
+Window: "dcbe"
+char_set = {d, c, b, e}
+length = 4 → equal (no update needed)
+
+Step 8 (right = 7 → 'f')
+Window: "dcbef"
+char_set = {d, c, b, e, f}
+max_length = 5
+start_index = 3
