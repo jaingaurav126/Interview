@@ -1,0 +1,50 @@
+Step 1: Start
+
+queue = [7]
+result = []
+
+WHILE LOOP (1st time)
+queue = [7]
+level_size = 1
+
+for loop runs 1 time
+i = 0
+node = queue.popleft() which means
+node = 7
+queue becomes []
+level = [7]
+queue.append(2)
+queue.append(3)
+
+queue becomes:[2, 3]
+Save level:result = [[7]]
+
+WHILE LOOP (2nd time)
+queue = [2, 3]
+level_size = 2 #“Level 2 has 2 nodes”
+
+for loop runs 2 times
+i = 0
+node = 2
+level = [2]
+queue = [3]
+queue = [3, 4, 5]
+
+i = 1
+node = 3
+level = [2, 3]
+queue = [4, 5]
+queue = [4, 5, 6]
+
+Save level:
+result = [[7], [2, 3]]
+
+WHILE LOOP (3rd time)
+level_size=3
+node = 4
+level = [4]
+.
+.
+.
+result = [[7], [2, 3], [4, 5, 6]]
+queue = []
