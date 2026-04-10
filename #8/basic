@@ -1,0 +1,162 @@
+
+# 🧱 What is a Stack?
+
+A **stack** is a data structure that works on:
+
+> 👉 **LIFO (Last In, First Out)**
+
+Think of it like a stack of plates 🍽️:
+
+* You **add** a plate on top
+* You **remove** the top plate first
+
+---
+
+# 📦 Basic Operations
+
+There are only 3 main operations you need to know:
+
+### 1. **Push** (add element)
+
+```id="y3sn6m"
+stack.push(5)
+```
+
+👉 Adds element to the **top**
+
+---
+
+### 2. **Pop** (remove element)
+
+```id="g1rkdp"
+stack.pop()
+```
+
+👉 Removes the **top element**
+
+---
+
+### 3. **Peek / Top**
+
+```id="6y5d2b"
+stack[-1]
+```
+
+👉 See the top element **without removing it**
+
+---
+
+# 🎯 Example Step-by-Step
+
+Let’s simulate:
+
+```id="r36c4n"
+stack = []
+```
+
+### Push 10
+
+```
+[10]
+```
+
+### Push 20
+
+```
+[10, 20]
+```
+
+### Push 30
+
+```
+[10, 20, 30]
+```
+
+### Pop
+
+```
+[10, 20]
+```
+
+👉 30 was removed (last in, first out!)
+
+---
+
+# 🧠 How Stack is Implemented
+
+In most coding interviews (and Python), we use a **list/array** as a stack:
+
+```python id="q82g3j"
+stack = []
+
+stack.append(10)   # push
+stack.append(20)
+stack.pop()        # pop
+top = stack[-1]    # peek
+```
+
+---
+
+# 📊 Visual Representation
+
+```
+Top → 30   ← Last added (removed first)
+       20
+Bottom → 10
+```
+
+---
+
+# ⚡ Why Stack is Important in DSA
+
+Stacks are used in problems like:
+
+* Undo/Redo operations
+* Browser history
+* Balanced parentheses `( )`
+* Expression evaluation
+* Monotonic stack problems (like the one I showed earlier)
+
+---
+
+# 🧩 Mini Practice Problem
+
+Try this:
+
+👉 Given:
+
+```
+Push: 1, 2, 3
+Pop one element
+Push 4
+```
+
+👉 What will stack look like?
+
+---
+
+# 💬 Answer
+
+```
+[1, 2, 4]
+```
+
+---
+
+# 🚀 What Next?
+
+Now that you understand the basics, the next step is:
+
+👉 Learn a **very simple stack problem** like:
+**Valid Parentheses**
+
+It’s one of the most asked beginner questions.
+
+---
+
+If you want, I can:
+
+* Walk you through **Valid Parentheses step-by-step**
+* Or give you **easy → medium → hard stack roadmap**
+
+Just tell me 👍

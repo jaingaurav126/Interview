@@ -1,0 +1,56 @@
+arr    = [4, 5, 2, 10, 8]
+result = [-1, -1, -1, -1, -1]
+stack  = []
+
+Iteration 1 (i = 4, element = 8)
+stack = []
+Step:
+Stack is empty → no greater element
+result[4] = -1
+Push 8
+stack  = [8]
+result = [-1, -1, -1, -1, -1]
+
+Iteration 2 (i = 3, element = 10)
+Step:
+stack[-1] = 8 ≤ 10 → pop 8
+stack = []
+stack  = [10]
+result = [-1, -1, -1, -1, -1]
+
+Iteration 3 (i = 2, element = 2)
+stack = [10]
+Step:
+stack[-1] = 10 > 2 → STOP popping
+
+Found next greater = 10
+result[2] = 10
+stack  = [10, 2]
+result = [-1, -1, 10, -1, -1]
+
+Iteration 4 (i = 1, element = 5)
+stack = [10, 2]
+Step:
+stack[-1] = 2 ≤ 5 → pop
+stack = [10]
+stack[-1] = 10 > 5 → STOP
+
+👉 Next greater = 10
+
+result[1] = 10
+Push 5
+stack  = [10, 5]
+result = [-1, 10, 10, -1, -1]
+🔍 Iteration 5 (i = 0, element = 4)
+stack = [10, 5]
+Step:
+stack[-1] = 5 > 4 → STOP
+
+👉 Next greater = 5
+
+result[0] = 5
+Push 4
+stack  = [10, 5, 4]
+result = [5, 10, 10, -1, -1]
+✅ Final Answer
+[5, 10, 10, -1, -1]
