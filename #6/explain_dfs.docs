@@ -1,0 +1,49 @@
+Input Tree (we will dry run THIS)
+        10
+       /  \
+      2   10
+     / \     \
+    20  1     5
+               /  \
+              3    4
+
+DFS Order (IMPORTANT)
+
+DFS goes bottom-up, so actual processing order is:
+20 → 1 → 2 → 3 → 4 → -25 → 10 → 10(root)
+
+“DFS goes DOWN like a tree, but computes UP like a stack.”
+
+FULL DRY RUN (Every Step)
+
+dfs(10)
+├── dfs(2)
+│   ├── dfs(20)
+│   │   ├── dfs(None) → 0
+│   │   └── dfs(None) → 0
+│   │   ✅ process 20 → return 20
+│   │
+│   └── dfs(1)
+│       ├── dfs(None) → 0
+│       └── dfs(None) → 0
+│       ✅ process 1 → return 1
+│
+│   ✅ process 2 → return 22
+│
+└── dfs(10 right)
+    ├── dfs(None) → 0
+    └── dfs(-25)
+        ├── dfs(3)
+        │   ├── dfs(None) → 0
+        │   └── dfs(None) → 0
+        │   ✅ process 3 → return 3
+        │
+        └── dfs(4)
+            ├── dfs(None) → 0
+            └── dfs(None) → 0
+            ✅ process 4 → return 4
+        
+        ✅ process -25 → return -21
+    
+    ✅ process 10 → return 10
+

@@ -1,0 +1,99 @@
+
+Example (Binary Tree)
+        1
+       / \
+      2   3
+     / \
+    4   5
+
+DFS Traversal
+
+One possible order:
+
+1 → 2 → 4 → 5 → 3
+
+BFS Traversal
+
+Level order:
+
+1 → 2 → 3 → 4 → 5
+
+When you read a problem, look for these keywords 👇
+
+
+## 🟢 Choose **BFS** if you see:
+
+### 🔑 Clues:
+
+* “**shortest path**”
+* “**minimum steps / moves / time**”
+* “**level by level**”
+* “nearest / closest”
+
+👉 Think: expand outward evenly
+
+### 🧠 Why?
+
+BFS explores all nodes at distance 1, then 2, then 3…
+So the **first time you reach the goal = shortest path**
+
+### 📌 Classic example:
+
+* Binary Tree Level Order Traversal
+* Minimum Depth of Binary Tree
+
+---
+
+## 🔵 Choose **DFS** if you see:
+
+### 🔑 Clues:
+
+* “**all paths**”
+* “**count ways**”
+* “**check if exists**”
+* “**backtracking / combinations**”
+
+👉 Think: explore one full path, then try another
+
+### 🧠 Why?
+
+DFS is perfect when:
+
+* You must **try every possibility**
+* Or go deep into a structure (like trees)
+
+### 📌 Classic example:
+
+* Path Sum II
+* Subsets
+
+---
+
+## 🔥 Super Fast Decision Rule
+
+* **Need shortest / minimum? → BFS**
+* **Need all possibilities / paths? → DFS**
+
+---
+
+## ⚠️ Common Interview Trap
+
+Sometimes **both work**, but one is cleaner:
+
+* Finding a node in a tree
+  → DFS ✅ (simpler recursion)
+  → BFS also works but overkill
+
+* Shortest path in grid
+  → BFS ✅ (correct choice)
+
+---
+
+## 🧠 Bonus Memory Hack
+
+* **BFS = Queue = “Line of people” (fair, shortest first)**
+* **DFS = Stack = “Pile” (go deep, come back later)**
+
+---
+
+If you want, I can give you **2–3 tricky interview questions where people pick the wrong one**—those are great for leveling up fast.
